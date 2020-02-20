@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:robert_flutter/pages/Tab2/components/login_page.dart';
+import 'package:robert_flutter/pages/Tab2/components/splash_screen.dart';
 
 class FancyUi extends StatelessWidget {
   final String imageUrl =
@@ -39,7 +40,8 @@ class PageItem {
 
 class SliverListItem extends StatelessWidget {
   final List<PageItem> pages = [
-    PageItem(title: 'login page', page: LoginPage())
+    PageItem(title: 'login page', page: LoginPage()),
+    PageItem(title: 'Splash screen', page: SplashScreen()),
   ];
   @override
   Widget build(BuildContext context) {
