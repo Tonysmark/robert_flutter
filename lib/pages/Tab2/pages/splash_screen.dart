@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:robert_flutter/pages/Tab2/animations/FadeAnimate.dart';
-import 'package:robert_flutter/pages/Tab2/components/login_page.dart';
+import 'package:robert_flutter/pages/Tab2/pages/login_page.dart';
 
 /// @dependecies   simple_animations: ^1.3.6 page_transition: ^1.1.5
 class SplashScreen extends StatefulWidget {
@@ -9,8 +9,7 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
-    with TickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
   // TODO TickerProviderStateMixin ????
 
   AnimationController _scaleController;
@@ -120,9 +119,7 @@ class _SplashScreenState extends State<SplashScreen>
                   width: width,
                   height: 400,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/one.png'),
-                        fit: BoxFit.cover),
+                    image: DecorationImage(image: AssetImage('assets/images/one.png'), fit: BoxFit.cover),
                   ),
                 ),
               ),
@@ -136,9 +133,7 @@ class _SplashScreenState extends State<SplashScreen>
                   width: width,
                   height: 400,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/one.png'),
-                        fit: BoxFit.cover),
+                    image: DecorationImage(image: AssetImage('assets/images/one.png'), fit: BoxFit.cover),
                   ),
                 ),
               ),
@@ -152,9 +147,7 @@ class _SplashScreenState extends State<SplashScreen>
                   width: width,
                   height: 400,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/one.png'),
-                        fit: BoxFit.cover),
+                    image: DecorationImage(image: AssetImage('assets/images/one.png'), fit: BoxFit.cover),
                   ),
                 ),
               ),
@@ -178,8 +171,7 @@ class _SplashScreenState extends State<SplashScreen>
                     1.3,
                     Text(
                       "We promise thay you'll have the most \n fuss-free time with us",
-                      style: TextStyle(
-                          color: Colors.white.withOpacity(.7), height: 1.4),
+                      style: TextStyle(color: Colors.white.withOpacity(.7), height: 1.4),
                     ),
                   ),
                   SizedBox(height: 180),
@@ -213,8 +205,7 @@ class _SplashScreenState extends State<SplashScreen>
                                         left: _positionAnimation.value,
                                         child: AnimatedBuilder(
                                           animation: _scale2Controller,
-                                          builder: (context, child) =>
-                                              Transform.scale(
+                                          builder: (context, child) => Transform.scale(
                                             scale: _scale2Animation.value,
                                             child: Container(
                                               height: 60,
@@ -223,10 +214,7 @@ class _SplashScreenState extends State<SplashScreen>
                                                 shape: BoxShape.circle,
                                                 color: Colors.blue,
                                               ),
-                                              child: isHideIcon
-                                                  ? Container()
-                                                  : Icon(Icons.arrow_forward,
-                                                      color: Colors.white),
+                                              child: isHideIcon ? Container() : Icon(Icons.arrow_forward, color: Colors.white),
                                             ),
                                           ),
                                         ),
