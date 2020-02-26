@@ -24,7 +24,10 @@ class ListViewContainer extends StatelessWidget {
   Widget listBuilder(BuildContext context, int index) {
     return ListTile(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => PostInfo(post: posts[index])));
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PostInfo(post: posts[index])),
+        );
       },
       leading: Hero(
         tag: posts[index].title,

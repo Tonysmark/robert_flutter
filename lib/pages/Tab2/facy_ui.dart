@@ -3,8 +3,9 @@ import 'package:robert_flutter/pages/Tab2/components/login_page.dart';
 import 'package:robert_flutter/pages/Tab2/components/splash_screen.dart';
 
 class FancyUi extends StatelessWidget {
-  final String imageUrl =
-      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=33527847,1467350213&fm=26&gp=0.jpg';
+  final String imageUrl = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=33527847,1467350213&fm=26&gp=0.jpg';
+  final String title;
+  FancyUi({this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class FancyUi extends StatelessWidget {
 class PageItem {
   final String title;
   final Widget page;
+
   PageItem({this.title, this.page});
 }
 
@@ -43,17 +45,18 @@ class SliverListItem extends StatelessWidget {
     PageItem(title: 'login page', page: LoginPage()),
     PageItem(title: 'Splash screen', page: SplashScreen()),
   ];
+
   @override
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
-        _childbuilder,
+        _childBuilder,
         childCount: pages.length,
       ),
     );
   }
 
-  Widget _childbuilder(BuildContext context, int index) {
+  Widget _childBuilder(BuildContext context, int index) {
     return ListTile(
       title: Text(pages[index].title),
       onTap: () {

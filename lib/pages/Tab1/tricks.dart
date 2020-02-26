@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:robert_flutter/pages/Tab1/components/custom_scrollview.dart';
 import 'package:robert_flutter/pages/Tab1/components/fluent_navbar.dart';
 import 'package:robert_flutter/pages/Tab1/components/hero.dart';
 
 class TrickContainer extends StatelessWidget {
+  final String title;
+
+  TrickContainer({this.title});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('骚东西'),
+        title: Text(this.title),
       ),
       body: Tricks(),
     );
@@ -26,6 +31,7 @@ class _TricksState extends State<Tricks> {
       children: <Widget>[
         ListItem(title: "FluentNavigation", page: FluentNav()),
         ListItem(title: "HeroWidget", page: HeroWidget()),
+        ListItem(title: "CusScrollView", page: ScrollviewWrapper()),
       ],
     );
   }
@@ -43,10 +49,7 @@ class ListItem extends StatelessWidget {
     return ListTile(
       title: Text(title),
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => page),
-        );
+        Navigator.push(context, MaterialPageRoute(builder: (context) => page));
       },
     );
   }

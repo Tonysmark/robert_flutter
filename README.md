@@ -1,16 +1,4 @@
-# robert_flutter
+# Flutter 学习总结
 
-A new Flutter application.
+> ​	各个四个tab对应四种总结页面，首页是一些新奇的 UI 操作，tricks，hacks. 第二个页面是在 Youtube 上学习到的 UI 界面，第三个页面是根据宁浩flutter教程的一些进一步总结，最后一个页面主要放一些提升片的东西，原生接口，网络流，响应式编程，状态管理等一些范例内容。
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
