@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:robert_flutter/pages/Tab2/pages/login2.dart';
 import 'package:robert_flutter/pages/Tab2/pages/login_page.dart';
+import 'package:robert_flutter/pages/Tab2/pages/onboarding.dart';
 import 'package:robert_flutter/pages/Tab2/pages/splash_screen.dart';
 
 class FancyUi extends StatelessWidget {
@@ -46,6 +47,7 @@ class SliverListItem extends StatelessWidget {
     PageItem(title: 'login page', page: LoginPage()),
     PageItem(title: 'LoginPage2', page: LoginPage2()),
     PageItem(title: 'Splash screen', page: SplashScreen()),
+    PageItem(title: 'Onboarding', page: OnBoarding()),
   ];
 
   @override
